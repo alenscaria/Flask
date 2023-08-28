@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+
+{% block title %}Login{% endblock %}
+
+{% block content %} 
+
+<h4>Login Page</h4>
+
+<form action="{{url_for('login')}}" method="POST">
+    Login : <input type="text" name="name" id="name"> <br>
+    Password : <input type="password" name="password" id="password"><br><br>
+    <button type="submit">Submit</button>
+</form>
+
+{% if error %}
+    <p style="color: red;">Wrong username or Password</p>
+
+{% endif %}
+
+{% endblock%}
